@@ -1,3 +1,32 @@
+%------------------------------------------------------
+% THIS PACKAGE MAKES NO GURANTEES OF CORRECTNES!!!!
+% YOU CAN NOT BLAME ME (HENRIK SOMMERLAND) IF THIS PACKAGE CAUSES
+% YOU TO FAIL AN ASSIGNMENT!
+% 
+%PLEASE SUBMIT BUG REPORTS TO THE GITHUB PAGE IF YOU FID ANY MISTAKES!
+%AND CHECK THE GITHUB PAGE REGULARLY FOR FIXES!
+%
+%BE AWARE OF POSSIBILITIES OF SPELLING MISTAKES. I SPELL LIKE TODDLER ON CRACK.
+%
+%GOOD LUCK AND MAY A FORCE BE WITH YOU
+%------------------------------------------------------
+%To reffere to the usage of an arithmetic transition. Just use Arith
+%insted of a rule number.
+%
+%To makes rule appear on new line.
+%Use like so:
+%\begin{align*}  
+%& Statement1 \Rnl{rule number} Statement2 \Rnl{rule number} Statement3           
+%\end{align*}      
+%NOTE: the & at the begining of the first line is super duper important.
+% This will yeield:
+% 
+% Statement1
+% = {Rule corresponding to the number in the handout}
+% Statement2
+% = {Rule corresponding to the number in the handout}
+% Statement3
+
 \usepackage{pdftexcmds}
 \usepackage{mathtools}
 \usepackage{extarrows}
@@ -11,12 +40,6 @@
 	\overset{\raisebox{1ex}{\{\nT{#1}\}}}{=\joinrel=}
 }
 
-%Rule on new line. 
-%Use like so:
-%\begin{align*}  
-%& Statement \Rnl{rule number} Statement \Rnl{rule number} Statement           
-%\end{align*}      
-%NOTE: the & at the begining of the first line is super duper important.
 \DeclareRobustCommand{\Rnl}[1]{%
 	&\\&\nR{\nT{#1}}\\&
 }
@@ -25,6 +48,7 @@
 	\stringcases
     {#1}%
     {%
+    	{Arith}{Arithmetic}%
       {1.1}{Commutativity}%
       {1.2}{Associativity}%
       {1.3}{Distributivity}%
